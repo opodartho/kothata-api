@@ -7,5 +7,6 @@ defmodule KothataWeb.Router do
 
   scope "/api", KothataWeb do
     pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
   end
 end

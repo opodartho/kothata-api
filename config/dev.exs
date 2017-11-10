@@ -36,6 +36,6 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
-# Finally import the config/prod.secret.exs
+# Finally import the config/dev.secret.exs
 # which should be versioned separately.
 import_config "dev.secret.exs"
