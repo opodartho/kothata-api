@@ -1,8 +1,10 @@
 defmodule Kothata.Accounts.User do
+  @moduledoc """
+  Accounts User Schema
+  """
   use Ecto.Schema
   import Ecto.Changeset
   alias Kothata.Accounts.User
-
 
   schema "users" do
     field :email, :string

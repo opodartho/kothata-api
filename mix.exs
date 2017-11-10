@@ -39,7 +39,8 @@ defmodule Kothata.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:ex_machina, "~> 2.0", only: :test}
+      {:ex_machina, "~> 2.0", only: :test},
+      {:credo, "~> 0.3", only: [:dev, :test]}
     ]
   end
 

@@ -1,5 +1,9 @@
 defmodule Kothata.Application do
+  @moduledoc """
+  Application specific configuration
+  """
   use Application
+  alias KothataWeb.Endpoint
 
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
@@ -11,8 +15,9 @@ defmodule Kothata.Application do
       # Start the Ecto repository
       supervisor(Kothata.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(KothataWeb.Endpoint, []),
-      # Start your own worker by calling: Kothata.Worker.start_link(arg1, arg2, arg3)
+      supervisor(Endpoint, []),
+      # Start your own worker by calling:
+      # Kothata.Worker.start_link(arg1, arg2, arg3)
       # worker(Kothata.Worker, [arg1, arg2, arg3]),
     ]
 
@@ -25,7 +30,7 @@ defmodule Kothata.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    KothataWeb.Endpoint.config_change(changed, removed)
+    Endpoint.config_change(changed, removed)
     :ok
   end
 end
