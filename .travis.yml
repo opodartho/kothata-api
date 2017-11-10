@@ -1,21 +1,21 @@
 langauge: elixir
 
-elixir: '1.5.2'
+elixir: "1.5.2"
 
 opt_release: 20
 
 addons:
-  postgresql: '9.6'
+  postgresql: "9.6"
 
-services:
-  - postgresql
+services: 
+  - "postgresql"
 
 before_script:
-  - cp config/test.secret.example.exs config/test.secret.example.exs
-  - sed -i -e 's/password: "postgres"/password: ""/g' config/test.secret.exs
-  - sed -i -e 's/secret_key_base: "secret_key_base"/secret_key_base: "AUocLJkz5xjv9sfltxVwRXg+QdezKNbJX0RdnmCi3aFULdxiUuOyvzcLb0S1ZwV0"/g' config/test.secret.exs
-  - mix ecto.create, ecto.migrate
+  - "cp config/test.secret.example.exs config/test.secret.example.exs"
+  - "sed -i -e 's/password: \"postgres\"/password: \"\"/g' config/test.secret.exs"
+  - "sed -i -e 's/secret_key_base: \"secret_key_base\"/secret_key_base: \"AUocLJkz5xjv9sfltxVwRXg+QdezKNbJX0RdnmCi3aFULdxiUuOyvzcLb0S1ZwV0\"/g' config/test.secret.exs"
+  - "mix ecto.create, ecto.migrate"
 
-script:
-  - mix test
+script: 
+  - "mix test"
 
