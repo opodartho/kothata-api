@@ -12,7 +12,6 @@ config :kothata,
 # Configures the endpoint
 config :kothata, KothataWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "GDluD1ST5mEtKCtXDhXkPAtCt3i+Y4jUEZbuynrxt+WIaM9s57LiJUqmTsB0/Z74",
   render_errors: [view: KothataWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Kothata.PubSub,
            adapter: Phoenix.PubSub.PG2]
