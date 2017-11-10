@@ -16,6 +16,8 @@ before_install:
   - "cp config/test.secret.example.exs config/test.secret.exs"
   - "sed -i -e 's/password: \"postgres\"/password: \"\"/g' config/test.secret.exs"
   - "sed -i -e 's/secret_key_base: \"secret_key_base\"/secret_key_base: \"AUocLJkz5xjv9sfltxVwRXg+QdezKNbJX0RdnmCi3aFULdxiUuOyvzcLb0S1ZwV0\"/g' config/test.secret.exs"
+
+before_script:
   - "mix do ecto.create, ecto.migrate"
 
 script: 
